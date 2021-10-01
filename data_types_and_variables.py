@@ -1,5 +1,5 @@
 # Define movies as list of tuples (name, days)
-movies = [('Little Mermaid',2), ('Brother Bear', 5), ('Hercules', 1)]
+movies = [('Little Mermaid',3), ('Brother Bear', 5), ('Hercules', 1)]
 
 print('Total movie cost: ' + str((movies[0][1] + movies[1][1] + movies[2][1])*3))
 
