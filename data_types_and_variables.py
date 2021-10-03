@@ -5,9 +5,6 @@ movies = [('Little Mermaid',3), ('Brother Bear', 5), ('Hercules', 1)]
 
 print('Total movie cost: ' + str((movies[0][1] + movies[1][1] + movies[2][1])*3))
 
-#Could loop through 0,1,2 first index
-# Define variables for number of days & Daily rate
-
 # Could also use dictionary
 ########
 
@@ -19,8 +16,13 @@ print(pay)
 
 #Alternate
 
-rate = [work_week[0][1], work_week[1][1], work_week[2][1]] #[400, 300, 350]
-hours = [work_week[0][2], work_week[1][2], work_week[2][2]] #[10, 6, 4]
+rate = []
+for index in 0, 1, 2:
+    rate.append(work_week[index][1]) #[400,380,350]
+
+hours = []
+for index in 0, 1, 2:
+    hours.append(work_week[index][2]) #[10,6,4]
 
 pay = [rate * hours for rate, hours in zip(rate, hours)] #[4000, 2280, 1400]
 
@@ -35,6 +37,7 @@ schedule_conflict = False
 take_class = (not class_full) and (not schedule_conflict)
 
 ################
+# Product offer should return true when the offer is not expired and the customer buys over two items
 
 items_bought = 5
 offer_expired = False
