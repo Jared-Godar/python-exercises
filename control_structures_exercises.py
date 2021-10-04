@@ -258,10 +258,35 @@ for num in range(1,10):
 #     Here is an odd number: 47
 #     Here is an odd number: 49
 
-# In[ ]:
+# In[2]:
 
 
+while True:
+    print('Enter an odd number between 1 and 50')
+    user_odd = input()
+    if user_odd.isdigit() == False:
+        #int(user_odd)
+        print('Please enter a number')
+        continue
+    if int(user_odd) not in range(1,51):
+        print('Please enter a number between 1 and 50')
+        continue
+    if int(user_odd) % 2 != 1:
+        print('Please enter an odd number')
+        continue
+    if (user_odd.isdigit() and int(user_odd) in range(1,51) and int(user_odd) % 2 == 1):
+        break
+        
+user_odd = int(user_odd)
 
+i = 1
+while i <50:
+    if i != user_odd:
+        print('Here is an odd number:', i)
+        i +=2
+    elif i == user_odd:
+        print('Yikes! Skipping number', user_odd)
+        i += 2
 
 
 # -d. The input function can be used to prompt for input and use that input in your python code.<br/>
