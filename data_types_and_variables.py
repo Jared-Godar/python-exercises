@@ -39,11 +39,6 @@ take_class = (not class_full) and (not schedule_conflict)
 ################
 # Product offer should return true when the offer is not expired and the customer buys over two items
 
-items_bought = 5
-offer_expired = False
-
-product_offer = (items_bought > 2) and not offer_expired
-
 
 ########
 
@@ -57,7 +52,9 @@ is5 = len(password)>=5
 u20 = len(username)<=20
 
 #Boolean user and password not same
+
 same = password == username
+not_same = password != username
 
 # Bonus neither the username or password can start or end with whitespace
 
