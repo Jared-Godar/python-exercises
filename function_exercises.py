@@ -181,16 +181,23 @@ remove_vowels('abracadabra')
 # <li><code>First Name</code> will become <code>first_name</code></li>
 # <li><code>% Completed</code> will become <code>completed</code></li>
 
-# In[ ]:
+# In[101]:
 
 
+import re
+
+def normalize_name(name):
+    name = re.sub('\W|^(?=\d)','', name)
+    name = name.strip()
+    name = name.lower()
+    name = name.replace(' ', '_')
+    return(name)
 
 
-
-# In[ ]:
-
+# In[103]:
 
 
+normalize_name('% Completed ')
 
 
 # 12. Write a function named <code>cumulative_sum</code> that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.<ul>
